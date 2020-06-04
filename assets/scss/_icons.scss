@@ -1,0 +1,27 @@
+.icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 16px;
+    background-color: $gray-400;
+}
+
+.active-link .icon {
+    background-color: $primary;
+}
+
+.icon-dashboard {
+    mask: url('~assets/icons/dashboard.svg') no-repeat;
+}
+
+.icon-user {
+    mask: url('~assets/icons/user.svg') no-repeat;
+}
+
+.icon-sidebar {
+    mask: url('~assets/icons/sidebar.svg') no-repeat;
+}
+
+.icon-ctx {
+    mask: url('~assets/icons/ctx.svg') no-repeat;
+}

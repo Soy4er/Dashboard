@@ -1,0 +1,138 @@
+@import "_normalize.scss";
+@import "_variables.scss";
+@import "_icons.scss";
+
+body {
+  font-family     : $font-family-base;
+  font-size       : $font-size-md;
+  font-weight: normal;
+  background-color: $gray-100;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+.container {
+  width        : 100%;
+  padding-right: 100px;
+  padding-left : 100px;
+  margin-right : auto;
+  margin-left  : auto;
+  position: relative;
+}
+
+.item-checkbox {
+  width: 16px;
+  height: 16px;
+  display      : block;
+  border       : 1px solid $gray-400;
+  border-radius: 2px;
+  cursor       : pointer;
+  position     : relative;
+
+  &--active {
+    background-color: $white;
+  }
+  &--active:before {
+    content   : '\2713\0020';
+    position  : absolute;
+    top       : -4px;
+    left      : 0;
+    color     : $primary;
+    transition: all .2s;
+  }
+}
+
+.btn {
+  border          : 1px solid $gray-400;
+  border-radius   : 2px;
+  padding         : 10px 0;
+  cursor          : pointer;
+  text-align      : center;
+  user-select     : none;
+  width           : 100%;
+  background-color: inherit;
+  color           : $white;
+
+  &--disabled {
+      opacity       : 0.3;
+      cursor        : default;
+      pointer-events: none;
+  }
+
+  &--primary {
+      background-color: $primary;
+      border-color    : $primary;
+      color           : $white;
+  }
+}
+
+.table-buttons {
+  display: flex;
+  &__item {
+    margin-right: 15px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.confirm-deletion {
+  position        : absolute;
+  top             : 30px;
+  left            : -100px;
+  background-color: $white;
+  color           : $black;
+  padding         : 15px;
+  width           : 250px;
+  box-shadow      : 0px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius   : 4px;
+  text-align      : center;
+  z-index         : 1;
+  user-select     : none;
+
+  &__button {
+      display        : flex;
+      margin-top     : 10px;
+      justify-content: center;
+
+      &-cancel {
+          margin-right: 15px;
+          color: $black;
+      }
+  }
+}
+
+.toasted-container {
+  &.top-right {
+    top: 20px;
+    right: 50px;
+  }
+  & .toasted:first-child {
+    margin-top: 0;
+  }
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: $font-size-lg;
+  font-family: $font-family-add;
+  color: $primary;
+  font-weight: bold;
+}
