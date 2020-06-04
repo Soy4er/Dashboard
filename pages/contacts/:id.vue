@@ -1,16 +1,6 @@
 <template>
   <main>
     <ContentHeader :title="title" />
-    <table>
-      <thead>
-        <tr>
-          <th
-            v-for="column in columns.filter(({ visible }) => visible)"
-            :key="column.id"
-          >{{column.label}}</th>
-        </tr>
-      </thead>
-    </table>
   </main>
 </template>
 
@@ -27,12 +17,8 @@ export default {
   head () {
     return {
       title: this.title,
+      breadcrumb: {title: this.title, link: ''}
     }
-  },
-  computed: {
-    ...mapGetters({
-      columns: "table/getColumns"
-    })
   },
   components: {
     ContentHeader

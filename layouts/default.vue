@@ -1,12 +1,8 @@
 <template>
   <div id="app">
+    <Header />
     <Sidebar />
-    <div class="right-block">
-      <Header />
-      <div class="content">
-        <nuxt/>
-      </div>
-    </div>
+    <nuxt class="content-wrapper" />
   </div>
 </template>
 
@@ -23,11 +19,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  display: grid;
-  grid-template-columns: auto 1fr;
+.content-wrapper {
+  margin-top: 60px;
+  margin-left: 260px;
+  transition: margin-left .3s ease-in-out;
 }
-.content {
-  padding: 36px;
+.sidebar--min .content-wrapper {
+  margin-left: 90px;
 }
 </style>
